@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
 import '../models/task_model.dart';
-import '../theme/app_colors.dart';
 import 'category_chip.dart';
 
 class TaskCard extends StatelessWidget {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
+
 
 class StatsCard extends StatelessWidget {
   final String title;
@@ -33,7 +34,7 @@ class StatsCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: gradientColors.first.withOpacity(0.25),
+            color: gradientColors.first.withValues(alpha: 0.25),
             blurRadius: 16,
             offset: const Offset(0, 8),
           ),
@@ -51,7 +52,7 @@ class StatsCard extends StatelessWidget {
                 width: 100,
                 height: 100,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.08),
+                  color: Colors.white.withValues(alpha: 0.08),
                   shape: BoxShape.circle,
                 ),
               ),
@@ -85,7 +86,7 @@ class StatsCard extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.15),
+                          color: Colors.white.withValues(alpha: 0.15),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Icon(
@@ -131,7 +132,7 @@ class StatsCard extends StatelessWidget {
                           Text(
                             subtitle!,
                             style: const TextStyle(
-                              color: Colors.white90,
+                              color: Colors.white70,
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
                             ),

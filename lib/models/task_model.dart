@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
+
 
 enum TaskCategory {
   work,
@@ -29,7 +30,7 @@ extension TaskCategoryExtension on TaskCategory {
       case TaskCategory.personal:
         return Icons.person_outline_rounded;
       case TaskCategory.study:
-        return Icons.school_outlined_rounded;
+        return Icons.school_outlined;
       case TaskCategory.urgent:
         return Icons.error_outline_rounded;
     }

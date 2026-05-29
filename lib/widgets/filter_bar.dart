@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
 import '../models/task_model.dart';
 import '../providers/task_provider.dart';
-import '../theme/app_colors.dart';
+
 import 'category_chip.dart';
 
 class FilterBar extends StatelessWidget {
@@ -70,7 +71,7 @@ class FilterBar extends StatelessWidget {
                       },
                     ),
                   );
-                }).toList(),
+                }),
               ],
             ),
           ),

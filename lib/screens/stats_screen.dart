@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
 
 import '../models/task_model.dart';
 import '../providers/task_provider.dart';
-import '../theme/app_colors.dart';
+
 import '../widgets/stats_card.dart';
 
 class StatsScreen extends StatelessWidget {
@@ -237,7 +238,7 @@ class StatsScreen extends StatelessWidget {
                                   child: LinearProgressIndicator(
                                     value: catTotal == 0 ? 0.0 : catRate,
                                     minHeight: 8,
-                                    backgroundColor: category.color.withOpacity(0.08),
+                                    backgroundColor: category.color.withValues(alpha: 0.08),
                                     valueColor: AlwaysStoppedAnimation<Color>(category.color),
                                   ),
                                 ),

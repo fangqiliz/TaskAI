@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
 import '../models/task_model.dart';
-import '../theme/app_colors.dart';
+
 
 class PrioritySelector extends StatelessWidget {
   final TaskPriority selectedPriority;
@@ -66,7 +67,7 @@ class PrioritySelector extends StatelessWidget {
                     duration: const Duration(milliseconds: 200),
                     padding: const EdgeInsets.symmetric(vertical: 14),
                     decoration: BoxDecoration(
-                      color: isSelected ? activeBgColor.withOpacity(0.12) : Colors.transparent,
+                      color: isSelected ? activeBgColor.withValues(alpha: 0.12) : Colors.transparent,
                       borderRadius: _getBorderRadiusForPriority(priority),
                       border: Border.all(
                         color: isSelected ? activeBgColor : Colors.transparent,

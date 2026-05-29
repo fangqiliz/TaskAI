@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
 import '../models/task_model.dart';
-import '../theme/app_colors.dart';
+
 
 class CategoryChip extends StatelessWidget {
   final TaskCategory category;
@@ -53,11 +54,10 @@ class CategoryChip extends StatelessWidget {
       return Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         decoration: BoxDecoration(
-          color: color.withOpacity(0.08),
+          color: color.withValues(alpha: 0.08),
           borderRadius: BorderRadius.circular(6),
-          border: Border.solid,
-          borderSide: BorderSide(
-            color: color.withOpacity(0.2),
+          border: Border.all(
+            color: color.withValues(alpha: 0.2),
             width: 1.0,
           ),
         ),

@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
 
 import '../models/task_model.dart';
 import '../providers/task_provider.dart';
-import '../theme/app_colors.dart';
+
 import '../widgets/priority_selector.dart';
 
 class CreateTaskScreen extends StatefulWidget {
@@ -236,7 +237,7 @@ class _CreateTaskScreenState extends State<CreateTaskScreen> {
                           ),
                           const SizedBox(height: 8),
                           DropdownButtonFormField<TaskCategory>(
-                            value: _selectedCategory,
+                            initialValue: _selectedCategory,
                             decoration: const InputDecoration(
                               contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                             ),

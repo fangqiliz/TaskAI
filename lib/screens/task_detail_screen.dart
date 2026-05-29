@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
 
 import '../models/task_model.dart';
 import '../providers/task_provider.dart';
-import '../theme/app_colors.dart';
+
 import '../widgets/category_chip.dart';
 
 class TaskDetailScreen extends StatelessWidget {
@@ -294,7 +295,7 @@ class TaskDetailScreen extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: iconColor.withOpacity(0.08),
+            color: iconColor.withValues(alpha: 0.08),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Icon(icon, size: 18, color: iconColor),

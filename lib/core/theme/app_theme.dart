@@ -60,15 +60,21 @@ class AppTheme {
       ),
 
       // Estilo de tarjetas (Cards) premium y limpias
-      cardTheme: CardTheme(
-        color: AppColors.surface,
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-          side: const BorderSide(color: AppColors.border, width: 1),
-        ),
-        margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 0),
-      ),
+cardTheme: CardThemeData(
+  color: AppColors.surface,
+  elevation: 0,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(16),
+    side: const BorderSide(
+      color: AppColors.border,
+      width: 1,
+    ),
+  ),
+  margin: const EdgeInsets.symmetric(
+    vertical: 6,
+    horizontal: 0,
+  ),
+),
 
       // Estilo de botones elevados
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -137,7 +143,7 @@ class AppTheme {
       // Chips para filtros interactivos
       chipTheme: ChipThemeData(
         backgroundColor: Colors.transparent,
-        selectedColor: AppColors.primary.withOpacity(0.08),
+        selectedColor: AppColors.primary.withValues(alpha: 0.08),
         disabledColor: Colors.transparent,
         side: const BorderSide(color: AppColors.border),
         shape: RoundedRectangleBorder(
@@ -159,12 +165,12 @@ class AppTheme {
       // Configuración de navegación inferior
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: AppColors.surface,
-        indicatorColor: AppColors.primary.withOpacity(0.08),
+        indicatorColor: AppColors.primary.withValues(alpha: 0.08),
         elevation: 0,
         height: 64,
         labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-        labelTextStyle: MaterialStateProperty.resolveWith((states) {
-          if (states.contains(MaterialState.selected)) {
+        labelTextStyle: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) {
             return const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w600,

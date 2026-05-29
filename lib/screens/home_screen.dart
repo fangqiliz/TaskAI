@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
+import 'package:task_ai/core/theme/app_colors.dart';
 import 'dart:io';
 
 import '../providers/task_provider.dart';
-import '../theme/app_colors.dart';
+
 import '../widgets/empty_state.dart';
 import '../widgets/filter_bar.dart';
 import '../widgets/task_card.dart';
